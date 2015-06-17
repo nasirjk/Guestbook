@@ -1,0 +1,8 @@
+<Alloy>
+	<View class="contactInstance" layout="horizontal">
+		<Label id="contactType"/>
+		<View id="contactValueContainer">
+			<Label id="contactValue"/>
+		</View>
+	</View>
+</Alloy>

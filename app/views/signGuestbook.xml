@@ -1,0 +1,28 @@
+<Alloy>
+	<Window class="container">
+		<ScrollView scrollType="vertical" layout="vertical" height="Ti.UI.FILL">
+			<View id="inputFields" layout='vertical'>
+				<Label class="sectionLabel">Your name:</Label>
+				<View id="name" layout="horizontal">
+					<TextField id="firstName" hintText="First name" class="signText nameField"></TextField>
+					<TextField id="lastName" hintText="Last name" class="signText nameField"></TextField>
+				</View>
+				<Label class="sectionLabel">Leave something nice:</Label>
+				<TextArea id="comment" hintText="Comment..." class="signText"></TextArea>
+				
+				<Label class="sectionLabel">How to contact you:</Label>
+			</View>
+			
+			<ScrollView scrolltype="vertical" id="contactMethods" layout="vertical"></ScrollView>
+			
+			<Button id="addContactMethodButton" onClick="addContactMethod"> Add contact method </Button>
+		</ScrollView>
+		
+		<Menu id="menu" platform="android">
+			<MenuItem id="signBook"
+				title="Done"
+				onClick="signBook"
+				showAsAction="Ti.Android.SHOW_AS_ACTION_ALWAYS"/>
+		</Menu>
+	</Window>
+</Alloy>

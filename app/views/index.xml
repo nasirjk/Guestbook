@@ -1,0 +1,47 @@
+<Alloy>
+<Collection src="Guestbook"/>
+	<Window class="container">
+		<TableView dataCollection="Guestbook" filterAttribute="lastName">
+			<SearchBar id="searchbar" hintText="Filter by last name"></SearchBar>
+			<TableViewRow title="{firstName}" guestId="{guestId}" lastName="{lastName}" onClick="showGuest">
+				<View class="tableRow" layout="vertical" height="Titanium.UI.SIZE">
+					<View class="headerSection" layout="horizontal" height="Titanium.UI.SIZE">
+						<Label class="name firstName" text="{firstName}"/>
+						<Label class="name lastName" text="{lastName}"/>
+					</View>
+					<View class="commentSection" height="Titanium.UI.SIZE">
+						<Label class="comment" text="{comment}"/>
+					</View>
+				</View>
+			</TableViewRow>
+		</TableView>
+		
+		<Menu id="menu" platform="android">
+			<MenuItem id="signGuestbook"
+				title="Sign Guestbook"
+				onClick="signGuestbook"
+				showAsAction="Ti.Android.SHOW_AS_ACTION_IF_ROOM"/>
+		</Menu>
+	</Window>
+</Alloy>
+	<!-- MobileWeb -->
+    <!--Window platform="mobileweb">
+    <NavigationGroup id="nav" class="container">
+    	<!--Require src="directory" /-->
+    	<!--TabGroup>
+			<Tab title="Tab 1" icon="KS_nav_ui.png">
+				<Collection src="Guestbook"/>
+			        <!-- Add TableView and  TableViewRow -->
+			        <!--TableView dataCollection="Guestbook">
+			            <TableViewRow title="{FirstName}"></TableViewRow>
+			        </TableView>
+				</Collection>
+			</Tab>
+			<Tab title="Tab 2" icon="KS_nav_views.png">
+				<Window title="Tab 2">
+					<Label>I am Window 2</Label>
+				</Window>
+			</Tab>
+		</TabGroup>
+	</NavigationGroup>
+    </Window -->

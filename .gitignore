@@ -41,3 +41,17 @@ $RECYCLE.BIN/
 Network Trash Folder
 Temporary Items
 .apdisk
+
+.DS_Store
+Resources
+
+build.log
+
+build
+npm-debug.log
+
+tmp
+.map
+.project
+.settings
+
